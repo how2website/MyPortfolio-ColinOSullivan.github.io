@@ -26,22 +26,63 @@
             </div>
         </div>
     </div>
+
 <!------------ About ------------->
+
     <div id="about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="webImages/Colin .jpg">
+                    <img src="webImages/Colin.jpg">
                 </div>
                 <div class="about-col-2">
                     <h1>About Me</h1>
                     <p1> My name is Colin O'Sullivan. I come from Reading, Massachusetts, but go to school at Rensselear Polytechnic
                         in Troy, NY.
                     </p1>
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, C++, HTML, CSS</li>
+                            <li><span>Software</span><br>Microsoft Office Suite, Linux (WSL), Windows (10/11), Git/Github, Visual Studio</li>
+                        </ul>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, C++, HTML, CSS</li>
+                            <li><span>Software</span><br>Microsoft Office Suite, Linux (WSL), Windows (10/11), Git/Github, Visual Studio</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>Programming Languages</span><br>Python, C++, HTML, CSS</li>
+                            <li><span>Software</span><br>Microsoft Office Suite, Linux (WSL), Windows (10/11), Git/Github, Visual Studio</li>
+                        </ul>
                 </div>
             </div>
         </div>
     </div>
+
+
+<script>
+    var tablinks = document.getElementByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 
 </body>
 </html>
