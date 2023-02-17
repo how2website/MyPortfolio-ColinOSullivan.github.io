@@ -36,52 +36,53 @@
                     <img src="webImages/Colin.jpg">
                 </div>
                 <div class="about-col-2">
-                    <h1>About Me</h1>
-                    <p1> My name is Colin O'Sullivan. I come from Reading, Massachusetts, but go to school at Rensselear Polytechnic
-                        in Troy, NY.
-                    </p1>
+                    <h1 class = "sub-title">About Me</h1>
+                    <p> My name is Colin O'Sullivan. I come from Reading, Massachusetts, but go to school at Rensselear Polytechnic
+                        in Troy, NY. </p>
                 
                     <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents active-tab" id="Skills">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Programming Languages</span><br>Python, C++, HTML, CSS</li>
                             <li><span>Software</span><br>Microsoft Office Suite, Linux (WSL), Windows (10/11), Git/Github, Visual Studio</li>
                         </ul>
-                    <div class="tab-contents" id="Experience">
+                    <div class="tab-contents" id="experience">
                         <ul>
-                            <li><span>Programming Languages</span><br>Python, C++, HTML, CSS</li>
-                            <li><span>Software</span><br>Microsoft Office Suite, Linux (WSL), Windows (10/11), Git/Github, Visual Studio</li>
+                            <li><span>Jobs:</span><br> a bunch of jobs</li>
+                            <li><span>More jobs: </span><br>some more jobs</li>
                         </ul>
                     </div>
-                    <div class="tab-contents" id="Education">
+                    <div class="tab-contents" id="education">
                         <ul>
-                            <li><span>Programming Languages</span><br>Python, C++, HTML, CSS</li>
-                            <li><span>Software</span><br>Microsoft Office Suite, Linux (WSL), Windows (10/11), Git/Github, Visual Studio</li>
+                            <li><span> Current school: </span><br> RPI</li>
+                            <li><span> Major info: </span><br> *info about major*</li>
                         </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+<!------------ Services ------------->
 
 <script>
-    var tablinks = document.getElementByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-link");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
         }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
 </script>
 
 </body>
