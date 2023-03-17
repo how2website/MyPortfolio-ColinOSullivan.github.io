@@ -252,4 +252,46 @@ nav ul li a:hover::after {
     height: 100%
 }
 
+/* ---------- contact me ---------- */
+.contact-middle {
+    flex-basis: 35%;
+}
+.contact-middle p {
+    margin-top: 30px;
+}
+.contact-middle p i {
+    color: turquoise;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-logos {
+    margin-top: 30px;
+}
+.social-logos a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-logos a:hover {
+    color: turquoise;
+    transform: translateY(-5px);
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid turquoise;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff
+}
+.btn.btn2 {
+    display: inline-block;
+    background: turquoise;
+}
 
