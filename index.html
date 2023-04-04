@@ -30,17 +30,16 @@
 
 <!------------ About ------------->
 
-    <div id="about">
+    <div id= "about">
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
                     <img src="webImages/Colin.jpg">
                 </div>
                 <div class="about-col-2">
-                    <h1 class = "sub-title">About Me</h1>
+                    <h1 class="sub-title">About Me</h1>
                     <p> My name is Colin O'Sullivan. I come from Reading, Massachusetts, but go to school at Rensselear Polytechnic
                         in Troy, NY. </p>
-                
                     <div class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -51,6 +50,7 @@
                             <li><span>Programming Languages</span><br>Python, C++, HTML, CSS</li>
                             <li><span>Software</span><br>Microsoft Office Suite, Linux (WSL), Windows (10/11), Git/Github, Visual Studio</li>
                         </ul>
+                    </div>
                     <div class="tab-contents" id="experience">
                         <ul>
                             <li><span>Jobs:</span><br> a bunch of jobs</li>
@@ -69,88 +69,86 @@
     </div>
 
 <!------------ Background ------------->
-<div id="background">
-    <div class="container">
-        <h1 class="sub-title"> My Background </h1>
-        <div class="backgroundList">
-            <div>
-                <h2>Relevant Coursework</h2>
-                <p> list related classes etc etc.</p>
-            </div>
-            <div>
-                <h2>Campus Involvement</h2>
-                <p> list clubs, activities, extras, etc. </p>
+    <div id="background">
+        <div class="container">
+            <h1 class="sub-title"> My Background </h1>
+            <div class="backgroundList">
+                <div>
+                    <h2>Relevant Coursework</h2>
+                    <p> list related classes etc etc.</p>
+                </div>
+                <div>
+                    <h2>Campus Involvement</h2>
+                    <p> list clubs, activities, extras, etc. </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 <!------------ Projects ------------->
-<div id="projects">
-    <div class="containter">
-        <h1 class="sub-title"> My Work </h1>
-        <div class="project-list">
-            <div class="project">
-                <img src="webImages/loading.png">
-                <div class="layer">
-                    <h3>Project 1</h3>
-                    <p> Project 1 desc</p>
+    <div id="projects">
+        <div class="containter">
+            <h1 class="sub-title"> My Work </h1>
+            <div class="project-list">
+                <div class="project">
+                    <img src="webImages/loading.png">
+                    <div class="layer">
+                        <h3>Project 1</h3>
+                        <p> Project 1 desc</p>
+                    </div>
                 </div>
-            </div>
-            <div class="project">
-                <img src="webImages/loading.png">
-                <div class="layer">
-                    <h3>Project 2</h3>
-                    <p> Project 2 desc</p>
+                <div class="project">
+                    <img src="webImages/loading.png">
+                    <div class="layer">
+                        <h3>Project 2</h3>
+                        <p> Project 2 desc</p>
+                    </div>
                 </div>
-            </div>
-            <div class="project">
-                <img src="webImages/loading.png">
-                <div class="layer">
-                    <h3>Project 3</h3>
-                    <p> Project 3 desc</p>
+                <div class="project">
+                    <img src="webImages/loading.png">
+                    <div class="layer">
+                        <h3>Project 3</h3>
+                        <p> Project 3 desc</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 <!------------ Contact Me ------------->
-<div id="contact">
-    <div class="container">
-        <div class="row" style=" justify-content: center; text-align: center;">
-            <div class="contact-middle">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-paper-plane"></i>colinosullivan013@gmail.com</p>
-                <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/colin-o-sullivan-b7825b271/">Visit My LinkedIn</a></p>
-                <p><i class="fas fa-phone-square-alt"></i>781-779-7181</p>
-                <div class="social-logos">
-                    <!--<a href=""><i class="fab fa-phone"></i></a> -->
+    <div id="contact">
+        <div class="container">
+            <div class="row" style=" justify-content: center; text-align: center;">
+                <div class="contact-middle">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>colinosullivan013@gmail.com</p>
+                    <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/colin-o-sullivan-b7825b271/">Visit My LinkedIn</a></p>
+                    <p><i class="fas fa-phone-square-alt"></i>781-779-7181</p>
+                    <div class="social-logos">
+                        <!--<a href=""><i class="fab fa-phone"></i></a> -->
+                    </div>
+                    <a href="webImages/Colin OSullivan Resume_Jan 2023.docx.pdf" download class="btn btn2">Download Resume</a>
                 </div>
-                <a href="webImages/Colin OSullivan Resume_Jan 2023.docx.pdf" download class="btn btn2">Download Resume</a>
             </div>
         </div>
     </div>
-</div>
 
 
-<script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+    <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
 
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
             }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-
-</script>
+    </script>
 
 </body>
 </html>
