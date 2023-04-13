@@ -37,6 +37,15 @@ nav {
     height:100px;
 }
 
+.RCosLogo {
+    margin-top: 125px;
+    height: 175px;
+}
+
+.BostonPic {
+    margin-top: 125px;
+}
+
 nav ul li {
     display: inline-block;
     list-style: none;
